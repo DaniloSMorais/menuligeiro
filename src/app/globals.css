@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== ESTILOS GERAIS ==== */
+html, body {
+  height: 100%;
+  background: linear-gradient(135deg, #0a2342 0%, #0d3c66 100%);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== LINKS E BOTÕES ==== */
+button, a {
+  transition: all 0.3s ease;
+}
+
+button {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+a {
+  color: #93c5fd;
+}
+
+a:hover {
+  color: #bfdbfe;
+}
+
+/* ==== INPUTS ==== */
+input {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==== ANIMAÇÃO SUAVE ==== */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

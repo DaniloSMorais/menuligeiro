@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Menu Ligeiro
 
-## Getting Started
+**Menu Ligeiro** é uma solução inteligente desenvolvida pela **Micro Power UP** para otimizar o atendimento em estabelecimentos gastronômicos — como bares, restaurantes e lanchonetes — oferecendo um sistema de pedidos via QR Code com automação e integração.
 
-First, run the development server:
+---
+
+## Visão Geral
+
+O **Menu Ligeiro** é uma ferramenta que facilita o atendimento e o gerenciamento de pedidos.  
+Com um simples QR Code nas mesas, os clientes acessam o cardápio digital, fazem seus pedidos diretamente pelo celular e recebem um atendimento ágil e organizado.
+
+### Funcionalidades principais:
+- Cardápio digital acessível via QR Code  
+- Pedidos integrados ao sistema de impressão  
+- Atendimento humanizado com suporte ao WhatsApp  
+- Planos flexíveis para diferentes necessidades  
+- Landing Page moderna e responsiva  
+- Integração com sistemas Delivery (nos planos avançados)
+
+---
+
+## Estrutura do Projeto
+
+Este projeto foi desenvolvido com **Next.js 14** e **Tailwind CSS**, garantindo performance, escalabilidade e design moderno.
+
+**Principais seções:**
+1. **Página Inicial:**  
+   Apresenta a marca e os botões principais — *Fazer Pedido* e *Adquirir Sistema*.
+2. **Conheça o Sistema:**  
+   Explica o funcionamento da solução com imagens ilustrativas e efeito *fade-in*.
+3. **Planos:**  
+   Mostra os planos disponíveis (*Start, Pro e Premium*) de forma visual e organizada.
+4. **Quem Somos:**  
+   Seção institucional com missão, valores e canais de contato.
+
+---
+
+## Tecnologias Utilizadas
+
+- Next.js — Framework React para apps modernos  
+- React — Biblioteca para interfaces interativas  
+- Tailwind CSS — Estilização responsiva e rápida  
+- Lucide Icons — Ícones modernos e leves  
+- Framer Motion — Animações suaves  
+
+---
+
+## Como Executar o Projeto
 
 ```bash
+# Clone este repositório
+git clone https://github.com/DaniloSMorais/menuligeiro.git
+
+# Acesse o diretório
+cd menu-ligeiro
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto estará disponível em:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+arduino
+Copiar código
+http://localhost:3000
+Contato
+E-mail: contato@micropowerup.com.br
+WhatsApp: Clique aqui para conversar
+Website: www.micropowerup.com.br
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Desenvolvido por
+Micro Power UP
+Soluções inteligentes para pequenos negócios.
+Transformando ideias em resultados reais!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Licença
+Este projeto é de uso restrito e propriedade da Micro Power UP.
+A reprodução ou uso comercial sem autorização é proibido.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
