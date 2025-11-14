@@ -63,7 +63,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
             O sistema inteligente que transforma o atendimento do seu restaurante.
             <br />
-            Simples, moderno e eficiente.
+            Prático, moderno e eficiente.
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -177,8 +177,8 @@ export default function Home() {
             <h4 className="text-2xl font-bold mb-4 text-blue-700">Start</h4>
             <ul className="text-left space-y-2">
               <li><CheckIcon />Até 5 QRCODES nas mesas</li>
-              <li><CheckIcon />Atendimento humanizado</li>
-              <li><CheckIcon />Pedidos integrados com sistema de impressão</li>
+              <li><CheckIcon />Garçom Virtual</li>
+              <li><CheckIcon />Pedidos integrados com sistema de gestão</li>
               <li className="line-through opacity-60"><CheckIcon />Integração com Delivery</li>
               <li className="line-through opacity-60"><CheckIcon />Integração com WhatsApp</li>
             </ul>
@@ -190,10 +190,10 @@ export default function Home() {
             <h4 className="text-2xl font-bold mb-4 text-blue-700">Pro</h4>
             <ul className="text-left space-y-2">
               <li><CheckIcon />Até 15 QRCODES nas mesas</li>
-              <li><CheckIcon />Atendimento humanizado</li>
-              <li><CheckIcon />Pedidos integrados com sistema de impressão</li>
+              <li><CheckIcon />Garçom Virtual</li>
+              <li><CheckIcon />Pedidos integrados com sistema de gestão</li>
               <li><CheckIcon />Integração com sistema Delivery</li>
-              <li><CheckIcon />Interação com WhatsApp</li>
+              <li><CheckIcon />Integração com WhatsApp</li>
               <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
               <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
             </ul>
@@ -205,8 +205,8 @@ export default function Home() {
             <h4 className="text-2xl font-bold mb-4">Premium</h4>
             <ul className="text-left space-y-2">
               <li><CheckIcon />Até 50 QRCODES nas mesas</li>
-              <li><CheckIcon />Atendimento humanizado</li>
-              <li><CheckIcon />Pedidos Integrados com sistema de impressão</li>
+              <li><CheckIcon />Garçom Virtual</li>
+              <li><CheckIcon />Pedidos Integrados com sistema de gestão</li>
               <li><CheckIcon />Integração com sistema Delivery</li>
               <li><CheckIcon />Interação com WhatsApp</li>
               <li><CheckIcon />Landing Page Personalizada</li>
