@@ -182,7 +182,7 @@ export default function Home() {
               <li className="line-through opacity-60"><CheckIcon />Integração com Delivery</li>
               <li className="line-through opacity-60"><CheckIcon />Integração com WhatsApp</li>
             </ul>
-            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 189,90</p>
+            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 199,90</p>
           </div>
 
           {/* PRO */}
@@ -197,7 +197,7 @@ export default function Home() {
               <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
               <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
             </ul>
-            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 259,90</p>
+            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 299,90</p>
           </div>
 
           {/* PREMIUM */}
@@ -217,7 +217,7 @@ export default function Home() {
               target="_blank"
               className="mt-6 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
             >
-              Falar no WhatsApp
+              Conversar no WhatsApp
             </a>
           </div>
         </div>
