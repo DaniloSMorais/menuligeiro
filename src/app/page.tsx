@@ -91,7 +91,7 @@ export default function Home() {
       >
         <h3 className="text-3xl font-bold mb-8">Fazer Pedido</h3>
         <p className="text-lg max-w-2xl text-center mb-8">
-          Escolha o estabelecimento no qual deseja fazer seu pedido.
+          Em breve você poderá fazer os seus pedidos diretamente por aqui!
         </p>
 
         <div className="bg-blue-50 p-8 rounded-3xl shadow-xl w-full max-w-md space-y-5 border border-blue-200">
