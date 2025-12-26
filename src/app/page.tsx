@@ -3,6 +3,15 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Estado para os campos do formulário
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    whatsapp: "",
+    restaurante: "",
+  });
+
   const sobreRef = useRef<HTMLDivElement | null>(null);
   const planosRef = useRef<HTMLDivElement | null>(null);
   const quemSomosRef = useRef<HTMLDivElement | null>(null);
@@ -10,6 +19,26 @@ export default function Home() {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Função para enviar os dados via WhatsApp
+  const handleWhatsAppClick = () => {
+    const { nome, email, whatsapp, restaurante } = formData;
+    
+    // Validação simples
+    if (!nome || !whatsapp) {
+      alert("Por favor, preencha ao menos seu nome e WhatsApp.");
+      return;
+    }
+
+    const mensagem = `Olá! Gostaria de solicitar o teste gratuito de 7 dias.%0A%0A` +
+      `*Nome:* ${nome}%0A` +
+      `*E-mail:* ${email}%0A` +
+      `*WhatsApp:* ${whatsapp}%0A` +
+      `*Restaurante:* ${restaurante}`;
+
+    const url = `https://wa.me/5543998419973?text=${mensagem}`;
+    window.open(url, "_blank");
   };
 
   useEffect(() => {
@@ -42,7 +71,6 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center text-center px-4">
       {/* SEÇÃO 1 — Hero */}
       <div className="relative flex flex-col items-center justify-center min-h-[100vh] w-full overflow-hidden bg-[#0a2540] text-white">
-        {/* Efeitos de fundo sutis */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-cover bg-center"></div>
         </div>
@@ -52,7 +80,6 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Conteúdo principal */}
         <div className="relative z-10 max-w-3xl text-center animate-fadeIn">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
             Bem-vindo ao
@@ -71,7 +98,7 @@ export default function Home() {
               onClick={() => scrollToSection("pedido-section")}
               className="bg-blue-600 hover:bg-blue-500 px-10 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 w-56 hover:shadow-blue-400/40"
             >
-              Fazer Pedido
+              Teste Gratuito
             </button>
 
             <button
@@ -84,31 +111,54 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SEÇÃO 2 — Fazer Pedido */}
+      {/* SEÇÃO 2 — Fazer Teste Gratuito */}
       <section
         id="pedido-section"
         className="min-h-[100vh] w-full flex flex-col items-center justify-center bg-white text-blue-900 rounded-t-3xl mt-10 py-16 shadow-inner"
       >
-        <h3 className="text-3xl font-bold mb-8">Fazer Pedido</h3>
+        <h3 className="text-3xl font-bold mb-8">Teste Gratuito por 7 dias</h3>
         <p className="text-lg max-w-2xl text-center mb-8">
-          Em breve você poderá fazer os seus pedidos diretamente por aqui!
+          Preencha o formulário abaixo e aguarde as instruções!
         </p>
 
         <div className="bg-blue-50 p-8 rounded-3xl shadow-xl w-full max-w-md space-y-5 border border-blue-200">
           <input
             type="text"
-            placeholder="Escolha a cidade"
+            placeholder="Nome Completo"
+            value={formData.nome}
+            onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+            className="w-full bg-white border border-blue-300 rounded-xl p-3 text-blue-900 placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className="w-full bg-white border border-blue-300 rounded-xl p-3 text-blue-900 placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <input
             type="text"
-            placeholder="Digite o estabelecimento"
+            placeholder="WhatsApp"
+            value={formData.whatsapp}
+            onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
             className="w-full bg-white border border-blue-300 rounded-xl p-3 text-blue-900 placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
-          <button className="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-semibold text-white shadow-md hover:scale-105 transition-transform">
-            Buscar
+          <input
+            type="text"
+            placeholder="Nome do Restaurante"
+            value={formData.restaurante}
+            onChange={(e) => setFormData({ ...formData, restaurante: e.target.value })}
+            className="w-full bg-white border border-blue-300 rounded-xl p-3 text-blue-900 placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+
+          <button 
+            onClick={handleWhatsAppClick}
+            className="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-semibold text-white shadow-md hover:scale-105 transition-transform"
+          >
+            Enviar Dados
           </button>
         </div>
       </section>
