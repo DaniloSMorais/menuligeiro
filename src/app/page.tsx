@@ -82,15 +82,15 @@ export default function Home() {
 
         <div className="relative z-10 max-w-3xl text-center animate-fadeIn">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            Bem-vindo ao
+            Menu Ligeiro
           </h1>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            <span className="text-blue-300">Menu Ligeiro</span>
+            <span className="text-blue-300">Garçom Virtual</span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
-            O sistema inteligente que transforma o atendimento do seu restaurante.
+            Venda no automático e atenda melhor 
             <br />
-            Prático, moderno e eficiente.
+            
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -105,20 +105,126 @@ export default function Home() {
               onClick={() => scrollToSection("sobre-section")}
               className="bg-white text-blue-900 px-10 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:bg-blue-100 hover:scale-105 transition-all duration-300 w-56"
             >
-              Adquirir Sistema
+              Por que investir?
             </button>
           </div>
         </div>
       </div>
+    {/* SEÇÃO 2 - Veja na prática nosso Atendente */}
+      <section className="py-20 bg-white w-full flex flex-col items-center border-t border-blue-100">
+        <h3 className="text-3xl font-bold mb-12 text-blue-900 text-center px-4">
+          Veja na prática nosso Atendente
+        </h3>
 
-      {/* SEÇÃO 2 — Fazer Teste Gratuito */}
+        <div className="flex flex-col md:flex-row gap-12 md:gap-20 justify-center items-center w-full max-w-6xl px-4">
+          
+          {/* VÍDEO 01 — Atendimento Local */}
+          <div className="flex flex-col items-center">
+            <h4 className="text-xl font-semibold mb-6 text-blue-700">Atendimento Local</h4>
+            {/* W-64 (256px) garante que a largura seja idêntica para ambos */}
+            <div className="relative w-64 aspect-[9/16] bg-black rounded-[2.5rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
+              <video 
+                className="absolute inset-0 w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              >
+                <source src="/videos/automacao.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
+            </div>
+          </div>
+
+          {/* VÍDEO 02 — Atendimento Delivery */}
+          <div className="flex flex-col items-center">
+            <h4 className="text-xl font-semibold mb-6 text-blue-700">Atendimento Delivery</h4>
+            <div className="relative w-64 aspect-[9/16] bg-black rounded-[2.5rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
+              <video 
+                className="absolute inset-0 w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              >
+                <source src="/videos/delivery.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SEÇÃO 3 — Conheça o Sistema */}
+      <section
+        id="sobre-section"
+        ref={sobreRef}
+        className={`min-h-[100vh] w-full flex flex-col items-center justify-center bg-gradient-to-b from-blue-800 to-blue-900 text-white py-20 px-8 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <h3 className="text-3xl font-bold mb-8 text-center">Nossa solução</h3>
+
+        <div className="max-w-4xl text-justify text-blue-100 leading-relaxed text-lg space-y-4 mb-12">
+         <p>
+          O <strong>Menu Ligeiro</strong> é a solução que transforma seu atendimento: mais vendas e menos estresse. Muito mais que um cardápio digital, somos um <strong>assistente de vendas com IA</strong> integrado a uma <strong>gestão financeira completa</strong>.
+        </p>
+
+        <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+          <li style={{ marginBottom: '12px' }}>
+            ✔ <strong>Mesa e Delivery:</strong> Pedidos automáticos via QR Code ou link, sem filas ou erros.
+          </li>
+
+          <li style={{ marginBottom: '12px' }}>
+            ✔ <strong>IA que Vende:</strong> Sugestões inteligentes de acompanhamentos para aumentar seu ticket médio.
+          </li>
+
+          <li style={{ marginBottom: '12px' }}>
+            ✔ <strong>Gestão Total:</strong> Faturamento e controle financeiro em um sistema de retaguarda completo.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Economize tempo, reduza custos e foque no que importa: o seu cliente.</strong>
+        </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
+            <img src="/qrcode.png" alt="QR Code" className="w-24 h-24 object-contain mb-3" />
+            <p className="text-sm text-blue-100">QR Code nas Mesas</p>
+          </div>
+
+          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
+            <img src="/robot.png" alt="Garçom Virtual" className="w-24 h-24 object-contain mb-3" />
+            <p className="text-sm text-blue-100">Garçom Virtual Inteligente</p>
+          </div>
+
+          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
+            <img src="/pedido.png" alt="Pedido Integrado" className="w-24 h-24 object-contain mb-3" />
+            <p className="text-sm text-blue-100">Pedidos Integrados</p>
+          </div>
+        </div>
+      
+       <a
+        href="https://wa.me/5543998419973"
+        target="_blank"
+        className="mt-10 inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
+      >
+        Fale conosco
+      </a>
+      </section>
+    
+      {/* SEÇÃO 4 — Fazer Teste Gratuito */}
       <section
         id="pedido-section"
         className="min-h-[100vh] w-full flex flex-col items-center justify-center bg-white text-blue-900 rounded-t-3xl mt-10 py-16 shadow-inner"
       >
         <h3 className="text-3xl font-bold mb-8">Teste Gratuito por 7 dias</h3>
         <p className="text-lg max-w-2xl text-center mb-8">
-          Preencha o formulário abaixo e aguarde as instruções!
+          Você vai se <strong>surpreender</strong>!
+        </p>
+         <p className="text-lg max-w-2xl text-center mb-8">
+           Preencha e aguarde as instruções
         </p>
 
         <div className="bg-blue-50 p-8 rounded-3xl shadow-xl w-full max-w-md space-y-5 border border-blue-200">
@@ -163,57 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO 3 — Conheça o Sistema */}
-      <section
-        id="sobre-section"
-        ref={sobreRef}
-        className={`min-h-[100vh] w-full flex flex-col items-center justify-center bg-gradient-to-b from-blue-800 to-blue-900 text-white py-20 px-8 transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <h3 className="text-3xl font-bold mb-8 text-center">Conheça o Sistema</h3>
-
-        <div className="max-w-4xl text-justify text-blue-100 leading-relaxed text-lg space-y-4 mb-12">
-          <p>
-            O <strong>Menu Ligeiro</strong> é uma solução personalizada para melhorar o
-            atendimento de clientes em estabelecimentos gastronômicos: bares, restaurantes,
-            lanchonetes e afins.
-          </p>
-
-          <p>
-            Nossa principal ferramenta é o <strong>Garçom Virtual</strong>, um assistente que
-            é acionado por <strong>QR Code</strong> na mesa do estabelecimento e mantém uma
-            conversação natural com o usuário, faz sugestões, anotações e encaminhamento do
-            pedido.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-10">
-          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
-            <img src="/qrcode.png" alt="QR Code" className="w-24 h-24 object-contain mb-3" />
-            <p className="text-sm text-blue-100">QR Code nas Mesas</p>
-          </div>
-
-          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
-            <img src="/robot.png" alt="Garçom Virtual" className="w-24 h-24 object-contain mb-3" />
-            <p className="text-sm text-blue-100">Garçom Virtual Inteligente</p>
-          </div>
-
-          <div className="flex flex-col items-center bg-white/10 p-6 rounded-2xl shadow-lg w-48">
-            <img src="/pedido.png" alt="Pedido Integrado" className="w-24 h-24 object-contain mb-3" />
-            <p className="text-sm text-blue-100">Pedidos Integrados</p>
-          </div>
-        </div>
-
-        <button
-          onClick={() => scrollToSection("planos-section")}
-          className="mt-12 bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
-        >
-          Conheça os Planos
-        </button>
-      </section>
-
-      {/* SEÇÃO 4 — Planos */}
+      {/* SEÇÃO 5 — Planos */}
       <section
         id="planos-section"
         ref={planosRef}
@@ -229,7 +285,7 @@ export default function Home() {
               <li><CheckIcon />Até 5 QRCODES nas mesas</li>
               <li><CheckIcon />Garçom Virtual</li>
               <li><CheckIcon />Pedidos integrados com sistema de gestão</li>
-              <li className="line-through opacity-60"><CheckIcon />Integração com Delivery</li>
+              <li><CheckIcon />Sistema de Delivery</li>
               <li className="line-through opacity-60"><CheckIcon />Integração com WhatsApp</li>
             </ul>
             <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 199,90</p>
@@ -242,7 +298,7 @@ export default function Home() {
               <li><CheckIcon />Até 15 QRCODES nas mesas</li>
               <li><CheckIcon />Garçom Virtual</li>
               <li><CheckIcon />Pedidos integrados com sistema de gestão</li>
-              <li><CheckIcon />Integração com sistema Delivery</li>
+              <li><CheckIcon />Sistema de Delivery</li>
               <li><CheckIcon />Integração com WhatsApp</li>
               <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
               <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
@@ -257,7 +313,7 @@ export default function Home() {
               <li><CheckIcon />Até 50 QRCODES nas mesas</li>
               <li><CheckIcon />Garçom Virtual</li>
               <li><CheckIcon />Pedidos Integrados com sistema de gestão</li>
-              <li><CheckIcon />Integração com sistema Delivery</li>
+              <li><CheckIcon />Sistema de Delivery</li>
               <li><CheckIcon />Interação com WhatsApp</li>
               <li><CheckIcon />Landing Page Personalizada</li>
               <li><CheckIcon />Promoções Semanais</li>
@@ -273,7 +329,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO 5 — Quem Somos */}
+      {/* SEÇÃO 6 — Quem Somos */}
       <section
         id="quem-somos-section"
         ref={quemSomosRef}
@@ -296,10 +352,6 @@ export default function Home() {
             <strong>Junte-se a nós</strong> e potencialize suas ideias com tecnologia!
           </p>
         </div>
-
-        <p className="text-blue-200 mb-6">
-          <strong>contato@micropowerup.com.br</strong>
-        </p>
 
         <a
           href="https://wa.me/5543998419973"
