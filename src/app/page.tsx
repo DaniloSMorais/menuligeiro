@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </div>
     {/* SEÇÃO 2 - Veja na prática nosso Atendente */}
-      <section className="py-20 bg-white w-full flex flex-col items-center border-t border-blue-100">
+      <section id="videos-section" className="py-20 bg-white w-full flex flex-col items-center border-t border-blue-100">
         <h3 className="text-3xl font-bold mb-12 text-blue-900 text-center px-4">
           Veja na prática nosso Atendente
         </h3>
@@ -150,8 +150,13 @@ export default function Home() {
               </video>
             </div>
           </div>
-
         </div>
+          <button
+            onClick={() => scrollToSection("pedido-section")}
+            className="mt-12 bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 w-64 hover:shadow-blue-400/40"
+          >
+            Quero testar
+          </button>
       </section>
 
       {/* SEÇÃO 3 — Conheça o Sistema */}
@@ -166,7 +171,7 @@ export default function Home() {
 
         <div className="max-w-4xl text-justify text-blue-100 leading-relaxed text-lg space-y-4 mb-12">
          <p>
-          O <strong>Menu Ligeiro</strong> é a solução que transforma seu atendimento: mais vendas e menos estresse. Muito mais que um cardápio digital, somos um <strong>assistente de vendas com IA</strong> integrado a uma <strong>gestão financeira completa</strong>.
+          O <strong>Menu Ligeiro</strong> é a solução que transforma seu atendimento: você atende mais rápido, atende melhor, consegue escalar e economiza dinheiro. Muito mais que um cardápio digital, somos um <strong>assistente de vendas com IA</strong> integrado a uma <strong>gestão financeira completa</strong>.
         </p>
 
         <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
@@ -204,15 +209,13 @@ export default function Home() {
             <p className="text-sm text-blue-100">Pedidos Integrados</p>
           </div>
         </div>
-      
-       <a
-        href="https://wa.me/5543998419973"
-        target="_blank"
-        className="mt-10 inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
-      >
-        Fale conosco
-      </a>
-      </section>
+          <button
+            onClick={() => scrollToSection("videos-section")}
+            className="mt-10 inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
+          >
+            Veja na prática
+          </button>
+        </section>
     
       {/* SEÇÃO 4 — Fazer Teste Gratuito */}
       <section
@@ -329,7 +332,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO 6 — Quem Somos */}
+ {/* SEÇÃO 6 — Quem Somos */}
       <section
         id="quem-somos-section"
         ref={quemSomosRef}
@@ -339,17 +342,16 @@ export default function Home() {
 
         <div className="max-w-4xl text-justify text-blue-100 leading-relaxed text-lg space-y-6 mb-10">
           <p>
-            A <strong>Micro Power UP</strong> é sua parceira estratégica na criação de soluções
-            inteligentes que simplificam o dia a dia do seu negócio. Nossa missão é desenvolver
-            sistemas práticos e personalizados, capazes de tornar sua rotina mais ágil, eficiente
-            e livre da burocracia.
+            A <strong>Micro Power UP</strong> nasceu com uma missão clara: potencializar pequenos e médios negócios com apoio da Inteligência Artificial e de aplicações de sofware.
           </p>
           <p>
-            Mais do que uma empresa de tecnologia, somos um time comprometido com o seu
-            crescimento, oferecendo ferramentas que unem inovação e resultados reais.
+            Nós não entregamos apenas software; entregamos <strong>liberdade e escala</strong>. Nossa especialidade é transformar operações caóticas em engrenagens automáticas de vendas, utilizando Inteligência Artificial para que você possa focar na estratégia, enquanto a tecnologia cuida da execução.
           </p>
           <p>
-            <strong>Junte-se a nós</strong> e potencialize suas ideias com tecnologia!
+            <strong>Sua empresa não precisa ser gigante para ter uma gestão de elite.</strong> Com a Micro Power UP, você profissionaliza seu atendimento, elimina erros humanos e coloca o seu negócio no mesmo nível de competitividade das grandes redes.
+          </p>
+          <p className="text-center text-xl font-semibold text-white">
+            Prepare-se para o próximo nível. O futuro do seu negócio começa agora.
           </p>
         </div>
 
@@ -361,6 +363,19 @@ export default function Home() {
           Conversar no WhatsApp
         </a>
       </section>
-    </div>
+
+      {/* BOTÃO FLUTUANTE FIXO */}
+      <a
+        href="https://wa.me/5543998419973"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-400 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+      >
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+      </a>
+
+    </div> // Div final que fecha o return principal
   );
 }
