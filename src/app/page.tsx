@@ -82,23 +82,26 @@ export default function Home() {
 
         <div className="relative z-10 max-w-3xl text-center animate-fadeIn">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            Menu Ligeiro
+            Economize mais de 
           </h1>
+         <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
+            R$ 65.000,00/ano com 
+         </h1>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            <span className="text-blue-300">Garçom Virtual</span>
+            <span className="text-blue-300">Menu Ligeiro</span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
-            Venda no automático e atenda melhor 
+            Tudo isso, sem levar em consideração a economia de tempo. 
             <br />
             
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <button
-              onClick={() => scrollToSection("pedido-section")}
+              onClick={() => scrollToSection("videos-section")}
               className="bg-blue-600 hover:bg-blue-500 px-10 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 w-56 hover:shadow-blue-400/40"
             >
-              Teste Gratuito
+              Veja na prática
             </button>
 
             <button
@@ -167,30 +170,88 @@ export default function Home() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h3 className="text-3xl font-bold mb-8 text-center">Nossa solução</h3>
+        <h3 className="text-3xl font-bold mb-8 text-center">Veja essa análise comparativa</h3>
 
         <div className="max-w-4xl text-justify text-blue-100 leading-relaxed text-lg space-y-4 mb-12">
-         <p>
-          O <strong>Menu Ligeiro</strong> é a solução que transforma seu atendimento: você atende mais rápido, atende melhor, consegue escalar e economiza dinheiro. Muito mais que um cardápio digital, somos um <strong>assistente de vendas com IA</strong> integrado a uma <strong>gestão financeira completa</strong>.
-        </p>
+          
+        <div style={{ fontFamily: 'sans-serif', color: '#FFFFFF', maxWidth: '800px', padding: '20px' }}>
+  
+            {/* Seção de Contraste de Impacto */}
+            <div style={{ 
+              display: 'flex', 
+              flexWrap: 'wrap', 
+              gap: '20px', 
+              marginBottom: '30px',
+              textAlign: 'center' 
+            }}>
+              {/* Card Custo Humano */}
+              <div style={{ 
+                flex: '1', 
+                minWidth: '280px', 
+                padding: '25px', 
+                borderRadius: '12px', 
+                backgroundColor: 'rgba(255, 77, 79, 0.1)', // Vermelho sutil de fundo
+                border: '2px solid #FF4D4F' 
+              }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: '#FF7875', textTransform: 'uppercase' }}>Custos com Equipe (2026)</span>
+                <h3 style={{ fontSize: '32px', margin: '10px 0', color: '#FF4D4F' }}>R$ 65.000,00</h3>
+                <p style={{ fontSize: '14px', margin: 0, color: '#E0E6ED' }}>Custo médio anual para 2 colaboradores (Mesa + Delivery) com encargos.</p>
+              </div>
 
-        <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
-          <li style={{ marginBottom: '12px' }}>
-            ✔ <strong>Mesa e Delivery:</strong> Pedidos automáticos via QR Code ou link, sem filas ou erros.
-          </li>
+              {/* Card Menu Ligeiro */}
+              <div style={{ 
+                flex: '1', 
+                minWidth: '280px', 
+                padding: '25px', 
+                borderRadius: '12px', 
+                backgroundColor: 'rgba(82, 196, 26, 0.1)', // Verde sutil de fundo
+                border: '2px solid #52C41A',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
+              }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: '#73D13D', textTransform: 'uppercase' }}>Com Menu Ligeiro</span>
+                <h3 style={{ fontSize: '32px', margin: '10px 0', color: '#52C41A' }}>R$ 99,90/mês</h3>
+                <p style={{ fontSize: '14px', margin: 0, color: '#E0E6ED' }}>Investimento mensal para automatizar as mesmas funções com IA.</p>
+              </div>
+            </div>
 
-          <li style={{ marginBottom: '12px' }}>
-            ✔ <strong>IA que Vende:</strong> Sugestões inteligentes de acompanhamentos para aumentar seu ticket médio.
-          </li>
+            {/* Texto de Venda com cores claras */}
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#FFFFFF' }}>
+              O <strong>Menu Ligeiro</strong> é a solução que transforma seu atendimento. Mais que um cardápio, somos um 
+              <span style={{ color: '#40A9FF' }}> <strong>assistente de vendas com IA</strong></span> que substitui a necessidade de múltiplos atendentes, garantindo escala e precisão.
+            </p>
 
-          <li style={{ marginBottom: '12px' }}>
-            ✔ <strong>Gestão Total:</strong> Faturamento e controle financeiro em um sistema de retaguarda completo.
-          </li>
-        </ul>
+            <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+              <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'flex-start' }}>
+                <span style={{ color: '#52C41A', marginRight: '10px', fontSize: '1.2rem' }}>✔</span>
+                <span style={{ color: '#E0E6ED' }}><strong style={{ color: '#FFFFFF' }}>Mesa e Delivery:</strong> Pedidos automáticos via QR Code ou link, operando 24/7 sem erros.</span>
+              </li>
+              <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'flex-start' }}>
+                <span style={{ color: '#52C41A', marginRight: '10px', fontSize: '1.2rem' }}>✔</span>
+                <span style={{ color: '#E0E6ED' }}><strong style={{ color: '#FFFFFF' }}>IA que Vende:</strong> Sugestões inteligentes para aumentar seu ticket médio automaticamente.</span>
+              </li>
+              <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'flex-start' }}>
+                <span style={{ color: '#52C41A', marginRight: '10px', fontSize: '1.2rem' }}>✔</span>
+                <span style={{ color: '#E0E6ED' }}><strong style={{ color: '#FFFFFF' }}>Gestão Financeira:</strong> Controle total do seu faturamento em um sistema de retaguarda completo.</span>
+              </li>
+            </ul>
 
-        <p>
-          <strong>Economize tempo, reduza custos e foque no que importa: o seu cliente.</strong>
-        </p>
+            <p style={{ 
+              marginTop: '25px', 
+              padding: '15px', 
+              borderTop: '1px solid rgba(255,255,255,0.1)', 
+              fontSize: '1.1rem', 
+              textAlign: 'center',
+              color: '#BAE7FF' 
+            }}>
+              <strong>Pare de queimar lucro com processos manuais. Foque no que importa: seu cliente.</strong>
+            </p>
+          </div>
+
+
+
+
+
+
         </div>
 
         <div className="flex flex-wrap justify-center gap-10">
@@ -290,8 +351,11 @@ export default function Home() {
               <li><CheckIcon />Pedidos integrados com sistema de gestão</li>
               <li><CheckIcon />Sistema de Delivery</li>
               <li className="line-through opacity-60"><CheckIcon />Integração com WhatsApp</li>
+              <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
+              <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
             </ul>
-            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 199,90</p>
+            <p className="mt-6 text-xl font-semibold text-blue-700 line-through opacity-60">R$ 199,90 / mês</p>
+             <p className="mt-1 text-xl font-semibold text-blue-700">R$ 99,90 / mês</p>
           </div>
 
           {/* PRO */}
@@ -306,7 +370,13 @@ export default function Home() {
               <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
               <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
             </ul>
-            <p className="mt-6 text-xl font-semibold text-blue-700">12x de R$ 299,90</p>
+            <a
+              href="https://wa.me/5543998419973"
+              target="_blank"
+              className="mt-6 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
+            >
+              Consulte agora
+            </a>
           </div>
 
           {/* PREMIUM */}
@@ -326,7 +396,7 @@ export default function Home() {
               target="_blank"
               className="mt-6 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
             >
-              Conversar no WhatsApp
+              Consulte agora
             </a>
           </div>
         </div>
