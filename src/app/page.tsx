@@ -247,11 +247,6 @@ export default function Home() {
             </p>
           </div>
 
-
-
-
-
-
         </div>
 
         <div className="flex flex-wrap justify-center gap-10">
@@ -354,8 +349,14 @@ export default function Home() {
               <li className="line-through opacity-60"><CheckIcon />Landing Page Personalizada</li>
               <li className="line-through opacity-60"><CheckIcon />Promoções Semanais</li>
             </ul>
-            <p className="mt-6 text-xl font-semibold text-blue-700 line-through opacity-60">R$ 199,90 / mês</p>
-             <p className="mt-1 text-xl font-semibold text-blue-700">R$ 99,90 / mês</p>
+            <p className="mt-2 text-xl font-semibold text-blue-700 line-through opacity-60">R$ 199,90 / mês</p>
+             <a
+              href="https://wa.me/5543998419973"
+              target="_blank"
+              className="mt-1 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
+            >
+              Oferta exclusiva
+            </a>
           </div>
 
           {/* PRO */}
